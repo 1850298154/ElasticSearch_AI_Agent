@@ -1,0 +1,284 @@
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 100, in call_tools
+    tool_info["content"] = search_tool.run(arguments)
+                           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 895, in run
+    raise error_to_raise
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 864, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\tools\index_search_tool.py", line 56, in elastic_search
+    encoding = tiktoken.encoding_for_model(cfg.model)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 117, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 104, in encoding_name_for_model
+    raise KeyError(
+    ...<2 lines>...
+    ) from None
+KeyError: 'Could not automatically map qwen-plus to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 100, in call_tools
+    tool_info["content"] = search_tool.run(arguments)
+                           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 895, in run
+    raise error_to_raise
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 864, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\tools\index_search_tool.py", line 56, in elastic_search
+    encoding = tiktoken.encoding_for_model(cfg.model)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 117, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 104, in encoding_name_for_model
+    raise KeyError(
+    ...<2 lines>...
+    ) from None
+KeyError: 'Could not automatically map qwen-plus to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 88, in call_tools
+    tool_info["content"] = list_indices_tool.run(**arguments)
+                           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: BaseTool.run() missing 1 required positional argument: 'tool_input'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 96, in call_tools
+    tool_info["content"] = index_details_tool.run(**arguments)
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: BaseTool.run() missing 1 required positional argument: 'tool_input'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 100, in call_tools
+    tool_info["content"] = search_tool.run(**arguments)
+                           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: BaseTool.run() missing 1 required positional argument: 'tool_input'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 88, in call_tools
+    tool_info["content"] = list_indices_tool.run(**arguments)
+                           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: BaseTool.run() missing 1 required positional argument: 'tool_input'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 96, in call_tools
+    tool_info["content"] = index_details_tool.run(**arguments)
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TypeError: BaseTool.run() missing 1 required positional argument: 'tool_input'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 99, in call_tools
+    arguments = json.loads(assistant_output.tool_calls[0].function.arguments)
+  File "C:\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 110 (char 109)
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 88, in call_tools
+    tool_info["content"] = list_indices_tool(**arguments)
+                           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\_api\deprecation.py", line 193, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+TypeError: BaseTool.__call__() got an unexpected keyword argument 'separator'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 96, in call_tools
+    tool_info["content"] = index_details_tool(**arguments)
+                           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\_api\deprecation.py", line 193, in warning_emitting_wrapper
+    return wrapped(*args, **kwargs)
+TypeError: BaseTool.__call__() got an unexpected keyword argument 'index_name'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 99, in call_tools
+    arguments = json.loads(assistant_output.tool_calls[0].function.arguments)
+  File "C:\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 120 (char 119)
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 99, in call_tools
+    arguments = json.loads(assistant_output.tool_calls[0].function.arguments)
+  File "C:\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 191 (char 190)
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 99, in call_tools
+    arguments = json.loads(assistant_output.tool_calls[0].function.arguments)
+  File "C:\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 176 (char 175)
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 99, in call_tools
+    arguments = json.loads(assistant_output.tool_calls[0].function.arguments)
+  File "C:\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Python313\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 96 (char 95)
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 100, in call_tools
+    tool_info["content"] = search_tool.run(arguments)
+                           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 895, in run
+    raise error_to_raise
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 864, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\tools\index_search_tool.py", line 58, in elastic_search
+    encoding = tiktoken.encoding_for_model(cfg.model)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 117, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 104, in encoding_name_for_model
+    raise KeyError(
+    ...<2 lines>...
+    ) from None
+KeyError: 'Could not automatically map qwen-plus to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+
+==================================================
+错误发生时间: ...
+Traceback (most recent call last):
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 104, in call_tools_safely
+    call_tools(tool_info, assistant_output)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\agent\agent_factory.py", line 100, in call_tools
+    tool_info["content"] = search_tool.run(arguments)
+                           ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 895, in run
+    raise error_to_raise
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\base.py", line 864, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "d:\zyt/git_ln/elasticsearch-agent\elasticsearch_agent\tools\index_search_tool.py", line 58, in elastic_search
+    encoding = tiktoken.encoding_for_model(cfg.model)
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 117, in encoding_for_model
+    return get_encoding(encoding_name_for_model(model_name))
+                        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\zooos\AppData\Roaming\Python\Python313\site-packages\tiktoken\model.py", line 104, in encoding_name_for_model
+    raise KeyError(
+    ...<2 lines>...
+    ) from None
+KeyError: 'Could not automatically map qwen-plus to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+
+==================================================
