@@ -112,9 +112,6 @@ INFO:root:第5轮大模型输出信息：ChatCompletionMessage(content='The docu
 
 INFO:root:最终答案：The document with the biggest age is for **Helen Parr**, who is **37 years old**.
 2025-10-09 00:15:38 - INFO - agent_factory:176 - 最终答案：The document with the biggest age is for **Helen Parr**, who is **37 years old**.
-INFO:elasticsearch_playground:Which document has the biggest age?
-2025-10-09 00:15:38 - INFO - agent_factory_test:125 - Which document has the biggest age?
-INFO:elasticsearch_playground:None
-2025-10-09 00:15:38 - INFO - agent_factory_test:126 - None
+
 
 D:\zyt\git_ln\elasticsearch-agent>
