@@ -73,6 +73,7 @@ if __name__ == "__main__":
     """
     # 定义要查询的索引名称
     index_name = "socio_economic_indicators"
+    index_name = "example_vector_index"
     # 创建工具实例并运行查询
     res = IndexShowDataTool().run(index_name)
     # 记录查询结果

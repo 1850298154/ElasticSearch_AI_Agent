@@ -93,9 +93,38 @@ if __name__ == "__main__":
     """
     # 定义要查询的索引名称
     index_name = "socio_economic_indicators"
+    index_name = "example_vector_index"
     # 创建工具实例
     tool = IndexDetailsTool()
     # 运行工具并获取结果
     result = tool(index_name)
     # 记录查询结果
     logger.info("result: %s", result)
+    
+"""
+{
+    "example_vector_index":{
+        "mappings":{
+            "properties":{
+                "embedding":{
+                    "type":"float"
+                },
+                "embeding":{
+                    "type":"dense_vector",
+                    "dims":3,
+                    "index":true,
+                    "similarity":"cosine",
+                    "index_options":{
+                        "type":"int8_hnsw",
+                        "m":16,
+                        "ef_construction":100
+                    }
+                },
+                "name":{
+                    "type":"text"
+                }
+            }
+        }
+    }
+}
+"""

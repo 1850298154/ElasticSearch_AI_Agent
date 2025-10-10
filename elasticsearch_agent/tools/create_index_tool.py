@@ -81,7 +81,7 @@ def test_vector_index_creation():
                 "name": {
                     "type": "text"
                 },
-                "embeding": {
+                "embedding": {
                     "type": "dense_vector",
                     "dims": 3
                 }

@@ -168,32 +168,47 @@ def _safe_get(d: Dict[str, Any], key: str) -> Any:
 
 
 if __name__ == "__main__":
-    """
-    直接运行本文件时，使用题目给出的示例数据进行测试。
-    """
-    # 构造与题目一致的 _bulk NDJSON 字符串
-    bulk_ndjson = """{ "index" : { "_index" : "people", "_id" : "1" } }
-{ "name" : "John Doe", "description" : "A software developer", "sex" : "Male", "age" : 30, "address" : "123 Elm Street, Springfield" }
-{ "index" : { "_index" : "people", "_id" : "2" } }
-{ "name" : "Jane Smith", "description" : "A project manager", "sex" : "Female", "age" : 28, "address" : "456 Maple Avenue, Anytown" }
-{ "index" : { "_index" : "people", "_id" : "3" } }
-{ "name" : "Alice Johnson", "description" : "A graphic designer", "sex" : "Female", "age" : 26, "address" : "789 Oak Lane, Metropolis" }
-{ "index" : { "_index" : "people", "_id" : "4" } }
-{ "name" : "Bob Brown", "description" : "A marketing specialist", "sex" : "Male", "age" : 32, "address" : "321 Pine Street, Gotham" }
-{ "index" : { "_index" : "people", "_id" : "5" } }
-{ "name" : "Charlie Davis", "description" : "An IT analyst", "sex" : "Male", "age" : 29, "address" : "654 Cedar Blvd, Star City" }
-{ "index" : { "_index" : "people", "_id" : "6" } }
-{ "name" : "Diana Prince", "description" : "A diplomat", "sex" : "Female", "age" : 35, "address" : "987 Birch Road, Themyscira" }
-{ "index" : { "_index" : "people", "_id" : "7" } }
-{ "name" : "Evan Wright", "description" : "A journalist", "sex" : "Male", "age" : 27, "address" : "213 Willow Lane, Central City" }
-{ "index" : { "_index" : "people", "_id" : "8" } }
-{ "name" : "Fiona Gallagher", "description" : "A nurse", "sex" : "Female", "age" : 31, "address" : "546 Spruce Street, South Side" }
-{ "index" : { "_index" : "people", "_id" : "9" } }
-{ "name" : "George King", "description" : "A teacher", "sex" : "Male", "age" : 34, "address" : "879 Elm St, Smallville" }
-{ "index" : { "_index" : "people", "_id" : "10" } }
-{ "name" : "Helen Parr", "description" : "A full-time superhero", "sex" : "Female", "age" : 37, "address" : "123 Metro Avenue, Metroville" }
-"""
+#     """
+#     直接运行本文件时，使用题目给出的示例数据进行测试。
+#     """
+#     # 构造与题目一致的 _bulk NDJSON 字符串
+#     bulk_ndjson = """{ "index" : { "_index" : "people", "_id" : "1" } }
+# { "name" : "John Doe", "description" : "A software developer", "sex" : "Male", "age" : 30, "address" : "123 Elm Street, Springfield" }
+# { "index" : { "_index" : "people", "_id" : "2" } }
+# { "name" : "Jane Smith", "description" : "A project manager", "sex" : "Female", "age" : 28, "address" : "456 Maple Avenue, Anytown" }
+# { "index" : { "_index" : "people", "_id" : "3" } }
+# { "name" : "Alice Johnson", "description" : "A graphic designer", "sex" : "Female", "age" : 26, "address" : "789 Oak Lane, Metropolis" }
+# { "index" : { "_index" : "people", "_id" : "4" } }
+# { "name" : "Bob Brown", "description" : "A marketing specialist", "sex" : "Male", "age" : 32, "address" : "321 Pine Street, Gotham" }
+# { "index" : { "_index" : "people", "_id" : "5" } }
+# { "name" : "Charlie Davis", "description" : "An IT analyst", "sex" : "Male", "age" : 29, "address" : "654 Cedar Blvd, Star City" }
+# { "index" : { "_index" : "people", "_id" : "6" } }
+# { "name" : "Diana Prince", "description" : "A diplomat", "sex" : "Female", "age" : 35, "address" : "987 Birch Road, Themyscira" }
+# { "index" : { "_index" : "people", "_id" : "7" } }
+# { "name" : "Evan Wright", "description" : "A journalist", "sex" : "Male", "age" : 27, "address" : "213 Willow Lane, Central City" }
+# { "index" : { "_index" : "people", "_id" : "8" } }
+# { "name" : "Fiona Gallagher", "description" : "A nurse", "sex" : "Female", "age" : 31, "address" : "546 Spruce Street, South Side" }
+# { "index" : { "_index" : "people", "_id" : "9" } }
+# { "name" : "George King", "description" : "A teacher", "sex" : "Male", "age" : 34, "address" : "879 Elm St, Smallville" }
+# { "index" : { "_index" : "people", "_id" : "10" } }
+# { "name" : "Helen Parr", "description" : "A full-time superhero", "sex" : "Female", "age" : 37, "address" : "123 Metro Avenue, Metroville" }
+# """
 
+#     tool = BulkInsertDocumentsTool()
+#     result = tool(bulk_ndjson)  # 只有一个字段，直接传字符串（与 list_indices_tool 风格一致）
+#     logger.info(result)
+    
+
+    # 新增：向 example_vector_index 插入向量示例文档
+
+    vector_bulk_ndjson = """{ "index": { "_index": "example_vector_index" } }
+{ "name": "苹果", "embedding": [0.2, 0.1, 0.4] }
+{ "index": { "_index": "example_vector_index" } }
+{ "name": "小船", "embedding": [0.7, 0.2, 0.6] }
+{ "index": { "_index": "example_vector_index" } }
+{ "name": "香蕉", "embedding": [0.3, 0.1, 0.3] }
+"""
     tool = BulkInsertDocumentsTool()
-    result = tool(bulk_ndjson)  # 只有一个字段，直接传字符串（与 list_indices_tool 风格一致）
-    logger.info(result)
+    result_vector = tool(vector_bulk_ndjson)
+    logger.info(result_vector)
+

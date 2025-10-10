@@ -156,5 +156,33 @@ if __name__ == "__main__":
     print('arguments', arguments)
     res = tool.run(arguments)
     # res = elastic_search(**arguments)
+    # # 记录查询结果
+    # logger.info(res)
+
+    temp_emb = [0.1, 0.2, 0.3]  # 示例
+    vector_query_obj = {
+        "query": {
+            "script_score": {
+                "query": {"match_all": {}},
+                "script": {
+                    "source": "cosineSimilarity(params.queryVector, 'embedding') + 1.0",
+                    "params": {
+                        "queryVector": temp_emb
+                    }
+                }
+            }
+        },
+    }
+    # 序列化为字符串（elastic_search 里会再 json.loads）
+    query = json.dumps(vector_query_obj, ensure_ascii=False)
+    param = {
+            "index_name": "example_vector_index",  # 索引名称
+            "query": query,
+            "from_": 0,  # 查询起始位置
+            "size": 10,  # 查询结果大小
+        }
+    print('param', param)    
+    res = tool.run(param)
+    # res = elastic_search(**arguments)
     # 记录查询结果
     logger.info(res)
